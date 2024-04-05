@@ -1,0 +1,63 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.weather-container {
+  margin-top: 20%;
+  display: block;
+  background-color: rgb(128, 128, 128, 0.8);
+  text-align: center;
+  padding-bottom: 10%;
+  padding-bottom: auto;
+}
+
+#temp {
+  font-weight: bold;
+  margin-bottom: 10px;
+  opacity: calc(100%);
+}
+
+#conditions,
+#description {
+  font-weight: bold;
+  margin-bottom: 10px;
+  opacity: calc(100%);
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
