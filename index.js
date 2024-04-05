@@ -29,17 +29,22 @@ async function getCondition() {
 async function getLocation() {
   const response = await fetch(url);
   const data = await response.json();
-  document.querySelector("h1").innerText = `${data.address}`.charAt(0).toUpperCase()+`${data.address}`.slice(1);
+  document.querySelector("h1").innerText =
+    `${data.address}`.charAt(0).toUpperCase() + `${data.address}`.slice(1);
   document.querySelector(
     "body"
   ).style.backgroundImage = `url(image/${data.address}.jpg)`;
 }
 
-function changeLocation(address) {
-  url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${address}?unitGroup=us&include=current&key=WVGNQMSX3PTP72YYZETFA7NB7&contentType=json`;
-  getTemp();
-  getCondition();
-  getLocation();
+async function changeLocation(address) {
+  try {
+    url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${address}?unitGroup=us&include=current&key=WVGNQMSX3PTP72YYZETFA7NB7&contentType=json`;
+    await getTemp();
+    await getCondition();
+    await getLocation();
+  } catch (error) {
+    document.querySelectorAll("h1")[1].innerText = "Exceed API Use Limit\nCome Again Tommorow";
+  }
 }
 
 changeLocation("vancouver");
