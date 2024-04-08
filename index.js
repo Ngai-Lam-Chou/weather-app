@@ -24,12 +24,8 @@ async function getLocation() {
   document.querySelectorAll("h1")[1].innerText = `${weatherData.resolvedAddress
     .split(",")[0]
     .trim()}`;
-  document.querySelector(
-    "body"
-  ).style.backgroundImage = `url(image/${weatherData.resolvedAddress
-    .split(",")[0]
-    .trim()}.jpg)`;
-}
+    document.querySelector("body").style.backgroundImage = `url(image/${weatherData.resolvedAddress.split(",")[0].toLowerCase()}.jpg)`;
+  }
 
 async function changeLocation(address) {
   try {
