@@ -1,41 +1,33 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 24px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  font-size: 24px;
-  font-weight: bold;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .weather-container {
-  margin-top: 20%;
-  display: block;
-  background-color: rgb(128, 128, 128, 0.8);
+  background-color: rgb(128, 128, 128, 0.93);
   text-align: center;
-  padding-bottom: 80%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-weight: bold;
 }
 
-
-#temp,
-#conditions,
-#description {
-  
-  margin-bottom: 10px;
-  opacity: calc(100%);
+.weather-container #curr-temp{
+  font-size: 50px;
+  font-weight: bold;
 }
 
 header {
   background-color: #333;
-  padding: 20px;
   color: #fff;
 }
 
 h1 {
   margin: 0;
-  font-size: 24px;
 }
 
 nav {
@@ -45,7 +37,7 @@ nav {
 
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -66,3 +58,10 @@ nav a:hover {
 nav li:not(:last-child) {
   border-right: 1px solid #fff;
 }
+
+header h1{
+  padding: 10px;
+  font-size: larger;
+  font-weight: normal;
+}
+
